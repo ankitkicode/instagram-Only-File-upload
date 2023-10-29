@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto;
+            /* flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center; */
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            /* overflow: hidden; */
+        }
+        .img{
+            display: inline-block;
+            height: 350px;
+            width: 520px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <% allPost.forEach(function(onePost){ %>
+        <!-- <%= onePost.imagePath %> - <%= onePost.caption%> -->
+       <ul>
+        <li><h3><%= onePost.caption%></h3></li>
+        <div class="img">
+            <img src="<%= onePost.imagePath %>" alt="">
+        </div>
+      </ul>
+     
+  <% })%>
+    
+</body>
+</html>
